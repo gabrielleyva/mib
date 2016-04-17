@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mib" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mib_bg2.png" translatesAutoresizingMaskIntoConstraints="NO" id="UIf-y1-4BR">
+                                <rect key="frame" x="-12" y="0.0" width="399" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzT-Pd-kuJ">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZA-sq-QYp">
+                                        <rect key="frame" x="20" y="512" width="335" height="30"/>
+                                        <state key="normal" title="Encrypt Message"/>
+                                        <connections>
+                                            <action selector="encryptButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cjd-oo-Pdb"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write a message to be Encrypted or Decrypted " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rA8-v6-Odn">
+                                        <rect key="frame" x="8" y="35" width="367" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="SjJ-3X-dFx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Encrypted or Decrypted Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cJX-YY-075">
+                                        <rect key="frame" x="8" y="225" width="367" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="VQf-aL-Yen"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgB-st-TNg">
+                                        <rect key="frame" x="20" y="570" width="335" height="30"/>
+                                        <state key="normal" title="Decrypt Message"/>
+                                        <connections>
+                                            <action selector="decryptButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aHO-zF-leT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VZA-sq-QYp" secondAttribute="trailing" constant="28" id="3vE-fU-e1X"/>
+                                    <constraint firstAttribute="trailing" secondItem="PgB-st-TNg" secondAttribute="trailing" constant="28" id="MfG-ry-n8t"/>
+                                    <constraint firstItem="cJX-YY-075" firstAttribute="leading" secondItem="JzT-Pd-kuJ" secondAttribute="leading" constant="8" id="RPf-0i-44q"/>
+                                    <constraint firstItem="cJX-YY-075" firstAttribute="top" secondItem="rA8-v6-Odn" secondAttribute="bottom" constant="30" id="beo-xI-XAj"/>
+                                    <constraint firstAttribute="trailing" secondItem="cJX-YY-075" secondAttribute="trailing" constant="8" id="dtu-gc-gzF"/>
+                                    <constraint firstAttribute="bottom" secondItem="PgB-st-TNg" secondAttribute="bottom" constant="67" id="fVw-PB-vgl"/>
+                                    <constraint firstItem="rA8-v6-Odn" firstAttribute="top" secondItem="JzT-Pd-kuJ" secondAttribute="top" constant="35" id="gEL-me-xCo"/>
+                                    <constraint firstItem="rA8-v6-Odn" firstAttribute="leading" secondItem="JzT-Pd-kuJ" secondAttribute="leading" constant="8" id="i7Y-DS-wNg"/>
+                                    <constraint firstItem="PgB-st-TNg" firstAttribute="top" secondItem="VZA-sq-QYp" secondAttribute="bottom" constant="28" id="ok3-Jo-MCD"/>
+                                    <constraint firstItem="PgB-st-TNg" firstAttribute="leading" secondItem="JzT-Pd-kuJ" secondAttribute="leading" constant="20" id="vba-RM-ppr"/>
+                                    <constraint firstAttribute="trailing" secondItem="rA8-v6-Odn" secondAttribute="trailing" constant="8" id="x24-Dd-OmC"/>
+                                    <constraint firstItem="VZA-sq-QYp" firstAttribute="leading" secondItem="JzT-Pd-kuJ" secondAttribute="leading" constant="20" id="yfj-8I-ad5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JzT-Pd-kuJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="06F-Zl-3ei"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UIf-y1-4BR" secondAttribute="trailing" constant="-28" id="GeN-NB-P0V"/>
+                            <constraint firstItem="UIf-y1-4BR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="MLw-us-NqX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UIf-y1-4BR" secondAttribute="bottom" id="RlC-g3-z2l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JzT-Pd-kuJ" secondAttribute="trailing" constant="-20" id="VA1-ON-kxg"/>
+                            <constraint firstItem="JzT-Pd-kuJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="gUQ-cZ-KcI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JzT-Pd-kuJ" secondAttribute="bottom" id="hpS-jj-hYH"/>
+                            <constraint firstItem="UIf-y1-4BR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-28" id="jGh-Qi-rJZ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="decryptButton" destination="PgB-st-TNg" id="TJb-Ih-Kex"/>
+                        <outlet property="encryptButton" destination="VZA-sq-QYp" id="FGh-9t-37E"/>
+                        <outlet property="messageView" destination="cJX-YY-075" id="q3e-0K-PO7"/>
+                        <outlet property="textView" destination="rA8-v6-Odn" id="ArO-Cv-wIO"/>
+                        <outlet property="transView" destination="JzT-Pd-kuJ" id="6FL-hQ-7jO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="225.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mib_bg2.png" width="1725" height="3066"/>
+    </resources>
+</document>
