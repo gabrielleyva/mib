@@ -67,15 +67,17 @@ class ViewController: UIViewController {
         
         for i in 0..<buf.count {
             if i % 2 == 0 {
+                print(buf[i])
                 buf[i] = buf[i] + 1
             } else {
+                print(buf[i])
                 buf[i] = buf[i] + 2
             }
         }
         
         let encryptMessage =  NSString(bytes: buf, length:buf.count, encoding: String.Encoding.utf8.rawValue)!
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.spinner.stopAnimating()
             self.outputTextView.text = encryptMessage as String
         }
@@ -90,15 +92,17 @@ class ViewController: UIViewController {
         
         for i in 0..<buf.count {
             if i % 2 == 0 {
+                print(buf[i])
                 buf[i] = buf[i] - 1
             } else {
+                print(buf[i])
                 buf[i] = buf[i] - 2
             }
         }
         
         let decryptMessage =  NSString(bytes: buf, length:buf.count, encoding: String.Encoding.utf8.rawValue)!
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { 
             self.spinner.stopAnimating()
             self.outputTextView.text = decryptMessage as String
         }
